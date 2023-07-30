@@ -1,0 +1,182 @@
+/* ---------------------------------------- Geral ---------------------------------------- */
+:root {
+    --first-color: #1b1815;
+    --second-color: #dae2eb;
+    --third-color: #d68737;
+    --four-color: #ecf3bb;
+    --five-color: #750b93;
+    --text-color: #fff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
+}
+
+section {
+    position: relative;
+    padding-top: 80px;
+    width: 100%;
+    height: 100vh;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-size: 1.2rem;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+p {
+    text-align: center;
+    background-color: aliceblue;
+}
+
+h1 {
+    text-align: center;
+    text-transform: uppercase;
+}
+
+h2 {
+    padding-top: 5px;
+    margin-left: 10px;
+}
+
+span {
+    display: flex;
+    justify-content: center;
+    font-size: 0.8rem;
+    margin-top: -10px;
+    background: #1d1e20;
+    color: #fff;
+}
+
+
+/* ---------------------------------------- Topo ---------------------------------------- */
+.navbar {
+    height: 80px;
+    background: var(--first-color);
+}
+
+.navbar .logo {
+    font-size: 1.5rem;
+    display: flex;
+    flex-direction: row;
+    color: #fff;
+    line-height: 50px;
+    font-family: "Bruno Ace SC", cursive;
+}
+.navbar .logo img {
+    width: 50px;
+    margin-right: 5px;
+}
+
+.collapse.show {
+    margin-top: 20px;
+}
+
+.collapse.show a {
+    transition: 0.8s;
+    padding-left: 1rem;
+    background: var(--first-color);
+}
+
+.collapse.show a:hover {
+    color: var(--text-color);
+}
+
+.btn_topo {
+    border: 2px solid var(--four-color);
+    position: relative;
+    display: block;
+    padding: 14px 15px;
+    color: var(--third-color);
+    font-size: 14px;
+    font-weight: bold;
+    text-align: center;
+    text-transform: uppercase;
+    overflow: hidden;
+    letter-spacing: 0.08em;
+    transition: all 1s ease;
+}
+
+.btn_topo:hover {
+    color: var(--first-color);
+    text-decoration: none;
+}
+
+.btn_topo:after {
+    content: "";
+    position: absolute;
+    height: 0%;
+    left: 50%;
+    top: 50%;
+    width: 150%;
+    z-index: -1;
+    transition: all 0.75s ease 0s;
+    background: var(--second-color);
+    transform: translateX(-50%) translateY(-50%) rotate(-25deg);
+}
+
+.btn_topo:hover::after {
+    height: 450%;
+}
+
+
+
+/* ---------------------- SECTION ---------------------------- */
+.title {
+    height: 80px;
+}
+.title h1 {
+    font-size: 2.5rem;
+    padding: 5px 0 5px 0;
+    letter-spacing: 4px;
+}
+
+#tag1 {
+    margin-top: 80px;
+}
+#area1, #area2, #area3 {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 80px;
+    height: auto;
+}
+#area1 {
+    background: #83bf5b;
+}
+#area2 {
+    background: #5bbfbf;
+}
+#area3 {
+    background: #d1a848;
+}
+.flex1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    max-width: 80%;
+    margin-top: 10px;  /* para nivelar o tamanho da primeira margem */
+    margin-bottom: 10px;
+}
+.flex1 > div {
+    flex: 1 1 300px;
+    margin: 10px;
+    background-color: rgb(119, 185, 173);
+}
+@media (max-width: 400px) {
+    .flex1 {
+        max-width: 96%;
+    }
+}
